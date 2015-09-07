@@ -15,3 +15,6 @@ echo "create user 'isk@localhost' identified by 'isk'" | mysql -u root -p
 echo "create database idk" | mysql -u root -p
 echo "grant all privileges on isk.* to isk identified by 'isk'" | mysql -u root -p
 
+echo "$(pwd)"
+echo "foo"
+

@@ -19,8 +19,8 @@ echo "create user 'isk@localhost' identified by 'isk'" | mysql -u root -p
 echo "create database isk" | mysql -u root -p
 echo "grant all privileges on isk.* to isk identified by 'isk'" | mysql -u root -p
 
-CURRENT = git log --pretty=format:"%d" -1
-
+# get current most recent commit
+CURRENT="$(git log --pretty=format:"%h" -1)"
 echo $CURRENT
 
 git checkout 8a33fbe
@@ -29,7 +29,7 @@ git checkout 8a33fbe
 sudo apt-get install -y libxml2-dev libxslt1-dev libpq-dev ruby1.9.1
 sudo gem install bundler
 sudo gem install rake -v '10.0.4'
-echo "gem 'activerecord-mysql2-adapter'" >> Gemfile
+echo "\ngem 'activerecord-mysql2-adapter'" >> Gemfile
 bundle install
 
 echo "importing infoshop db dump"

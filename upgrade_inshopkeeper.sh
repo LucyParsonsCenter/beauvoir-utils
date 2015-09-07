@@ -16,7 +16,8 @@ echo "create database idk" | mysql -u root -p
 echo "grant all privileges on isk.* to isk identified by 'isk'" | mysql -u root -p
 
 git checkout 8a33fbe
-echo $1
+
+echo "$1"
 
 echo "$(pwd)"
 echo "foo"

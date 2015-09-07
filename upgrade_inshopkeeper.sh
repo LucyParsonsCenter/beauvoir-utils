@@ -19,10 +19,6 @@ echo "grant all privileges on isk.* to isk identified by 'isk'" | mysql -u root 
 
 git checkout 8a33fbe
 
-infoshop = $1
-echo $1
-echo $infoshop
-
 echo "importing infoshop db dump"
-mysql -u isk -p -h localhost isk < $infoshop
+mysql -u isk -p -h localhost isk < $1
 

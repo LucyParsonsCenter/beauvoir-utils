@@ -1,15 +1,15 @@
 #!/bin/sh
 
 # this will take an infoshopkeeper DB dump and 
-# import it into Borges.
+# import it into Beauvoir
 #
 # usage: ./upgrade_infoshopkeeper.sh infoshop_db.sql
 
-# production: app is in ~/borges
+# production: app is in ~/beauvoir
 # dev: app is in /vagrant
-if [ -f ~/borges ]
+if [ -f ~/beauvoir ]
 then
-    cd ~/borges
+    cd ~/beauvoir
 else
     cd /vagrant
 fi
